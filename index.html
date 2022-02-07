@@ -9,6 +9,7 @@
 
   <!-- Styles for the App -->
   <style>
+
     html {
       font-family: Helvetica, sans-serif;
     }
@@ -20,16 +21,49 @@
       text-align: center;
     }
 
+    .btn {
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ffc8dd;
+    color: black;
+    border: 2px solid white;
+    font-family: "Papyrus", fantasy;
+    }
+
+    .btn:hover {
+    background-color: #cdb4db;
+    color: white;
+    }
+
   </style>
 </head>
 
 <body>
 
   <main class="appContainer">
+
+    <p id="mensaje">soy Marce de UFM<br>y estas viendo Disney Channel!</p>
+    <button class="btn" onclick="changeStyle();">cambiar estilo</button>
+
   </main>
   <!-- App JS -->
-  <script>
+  <script type="text/javascript">
 
+    var flag = true;
+    function changeStyle() {
+    let elem = document.getElementById("mensaje");
+    elem.style.color= flag ? 'red' : "";
+    elem.style.fontFamily = flag ? "Papyrus": "";
+    elem.style.fontSize =  flag ? "80px": "";
+    flag = !flag; 
+    }
+    
   </script>
 
 </body>
