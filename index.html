@@ -48,7 +48,7 @@
 
   <main class="appContainer">
 
-    <p id="mensaje">soy Marce de UFM<br>y estas viendo Disney Channel!</p>
+    <p id="mensaje">soy Marce de UFM, y estas viendo Disney Channel!</p>
     <button class="btn" onclick="changeStyle();">cambiar estilo</button>
 
   </main>
@@ -58,9 +58,11 @@
     var flag = true;
     function changeStyle() {
     let elem = document.getElementById("mensaje");
+    var text = elem.textContent;
     elem.style.color= flag ? 'red' : "";
     elem.style.fontFamily = flag ? "Papyrus": "";
     elem.style.fontSize =  flag ? "80px": "";
+    elem.innerHTML = flag ? text.toUpperCase(): text.toLowerCase();
     flag = !flag; 
     }
     
